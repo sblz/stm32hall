@@ -1,0 +1,504 @@
+12:33:44 **** Build of configuration Debug for project UART ****
+make -j6 all 
+Building file: ../startup/startup_stm32f411xe.s
+Building file: ../src/main.c
+Building file: ../src/syscalls.c
+Building file: ../src/system_stm32f4xx.c
+Invoking: MCU GCC Assembler
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+Building file: ../StdPeriph_Driver/src/misc.c
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -g -o "startup/startup_stm32f411xe.o" "../startup/startup_stm32f411xe.s"
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/syscalls.d" -MT"src/syscalls.o" -o "src/syscalls.o" "../src/syscalls.c"
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/system_stm32f4xx.d" -MT"src/system_stm32f4xx.o" -o "src/system_stm32f4xx.o" "../src/system_stm32f4xx.c"
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+Building file: ../StdPeriph_Driver/src/stm32f4xx_adc.c
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/misc.d" -MT"StdPeriph_Driver/src/misc.o" -o "StdPeriph_Driver/src/misc.o" "../StdPeriph_Driver/src/misc.c"
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_adc.d" -MT"StdPeriph_Driver/src/stm32f4xx_adc.o" -o "StdPeriph_Driver/src/stm32f4xx_adc.o" "../StdPeriph_Driver/src/stm32f4xx_adc.c"
+../src/system_stm32f4xx.c: In function 'SetSysClock':
+../src/system_stm32f4xx.c:870:3: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+   while ((RCC->CFGR & (uint32_t)RCC_CFGR_SWS ) != RCC_CFGR_SWS_PLL);
+   ^~~~~
+../src/system_stm32f4xx.c:871:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+   {
+   ^
+Finished building: ../startup/startup_stm32f411xe.s
+ 
+Building file: ../StdPeriph_Driver/src/stm32f4xx_can.c
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_can.d" -MT"StdPeriph_Driver/src/stm32f4xx_can.o" -o "StdPeriph_Driver/src/stm32f4xx_can.o" "../StdPeriph_Driver/src/stm32f4xx_can.c"
+Finished building: ../src/syscalls.c
+Finished building: ../src/system_stm32f4xx.c
+ 
+Finished building: ../src/main.c
+Finished building: ../StdPeriph_Driver/src/misc.c
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_adc.c
+ 
+ 
+Building file: ../StdPeriph_Driver/src/stm32f4xx_crc.c
+ 
+ 
+Building file: ../StdPeriph_Driver/src/stm32f4xx_cryp.c
+Invoking: MCU GCC Compiler
+Building file: ../StdPeriph_Driver/src/stm32f4xx_cryp_aes.c
+Building file: ../StdPeriph_Driver/src/stm32f4xx_cryp_des.c
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+Invoking: MCU GCC Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_crc.d" -MT"StdPeriph_Driver/src/stm32f4xx_crc.o" -o "StdPeriph_Driver/src/stm32f4xx_crc.o" "../StdPeriph_Driver/src/stm32f4xx_crc.c"
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_cryp.d" -MT"StdPeriph_Driver/src/stm32f4xx_cryp.o" -o "StdPeriph_Driver/src/stm32f4xx_cryp.o" "../StdPeriph_Driver/src/stm32f4xx_cryp.c"
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_cryp_aes.d" -MT"StdPeriph_Driver/src/stm32f4xx_cryp_aes.o" -o "StdPeriph_Driver/src/stm32f4xx_cryp_aes.o" "../StdPeriph_Driver/src/stm32f4xx_cryp_aes.c"
+Building file: ../StdPeriph_Driver/src/stm32f4xx_cryp_tdes.c
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_cryp_des.d" -MT"StdPeriph_Driver/src/stm32f4xx_cryp_des.o" -o "StdPeriph_Driver/src/stm32f4xx_cryp_des.o" "../StdPeriph_Driver/src/stm32f4xx_cryp_des.c"
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_cryp_tdes.d" -MT"StdPeriph_Driver/src/stm32f4xx_cryp_tdes.o" -o "StdPeriph_Driver/src/stm32f4xx_cryp_tdes.o" "../StdPeriph_Driver/src/stm32f4xx_cryp_tdes.c"
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_can.c
+ 
+Building file: ../StdPeriph_Driver/src/stm32f4xx_dac.c
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_dac.d" -MT"StdPeriph_Driver/src/stm32f4xx_dac.o" -o "StdPeriph_Driver/src/stm32f4xx_dac.o" "../StdPeriph_Driver/src/stm32f4xx_dac.c"
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_crc.c
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_cryp.c
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_cryp_des.c
+Building file: ../StdPeriph_Driver/src/stm32f4xx_dbgmcu.c
+ 
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_cryp_tdes.c
+Invoking: MCU GCC Compiler
+Building file: ../StdPeriph_Driver/src/stm32f4xx_dcmi.c
+Building file: ../StdPeriph_Driver/src/stm32f4xx_dfsdm.c
+ 
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_dbgmcu.d" -MT"StdPeriph_Driver/src/stm32f4xx_dbgmcu.o" -o "StdPeriph_Driver/src/stm32f4xx_dbgmcu.o" "../StdPeriph_Driver/src/stm32f4xx_dbgmcu.c"
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_cryp_aes.c
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+ 
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_dcmi.d" -MT"StdPeriph_Driver/src/stm32f4xx_dcmi.o" -o "StdPeriph_Driver/src/stm32f4xx_dcmi.o" "../StdPeriph_Driver/src/stm32f4xx_dcmi.c"
+Building file: ../StdPeriph_Driver/src/stm32f4xx_dma.c
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_dfsdm.d" -MT"StdPeriph_Driver/src/stm32f4xx_dfsdm.o" -o "StdPeriph_Driver/src/stm32f4xx_dfsdm.o" "../StdPeriph_Driver/src/stm32f4xx_dfsdm.c"
+Building file: ../StdPeriph_Driver/src/stm32f4xx_dma2d.c
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_dac.c
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_dma.d" -MT"StdPeriph_Driver/src/stm32f4xx_dma.o" -o "StdPeriph_Driver/src/stm32f4xx_dma.o" "../StdPeriph_Driver/src/stm32f4xx_dma.c"
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_dma2d.d" -MT"StdPeriph_Driver/src/stm32f4xx_dma2d.o" -o "StdPeriph_Driver/src/stm32f4xx_dma2d.o" "../StdPeriph_Driver/src/stm32f4xx_dma2d.c"
+ 
+Building file: ../StdPeriph_Driver/src/stm32f4xx_dsi.c
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_dsi.d" -MT"StdPeriph_Driver/src/stm32f4xx_dsi.o" -o "StdPeriph_Driver/src/stm32f4xx_dsi.o" "../StdPeriph_Driver/src/stm32f4xx_dsi.c"
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_dfsdm.c
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_dbgmcu.c
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_dcmi.c
+ 
+Building file: ../StdPeriph_Driver/src/stm32f4xx_exti.c
+ 
+Building file: ../StdPeriph_Driver/src/stm32f4xx_flash.c
+Invoking: MCU GCC Compiler
+Building file: ../StdPeriph_Driver/src/stm32f4xx_flash_ramfunc.c
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+Invoking: MCU GCC Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_exti.d" -MT"StdPeriph_Driver/src/stm32f4xx_exti.o" -o "StdPeriph_Driver/src/stm32f4xx_exti.o" "../StdPeriph_Driver/src/stm32f4xx_exti.c"
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_dma2d.c
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_dma.c
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_flash.d" -MT"StdPeriph_Driver/src/stm32f4xx_flash.o" -o "StdPeriph_Driver/src/stm32f4xx_flash.o" "../StdPeriph_Driver/src/stm32f4xx_flash.c"
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_flash_ramfunc.d" -MT"StdPeriph_Driver/src/stm32f4xx_flash_ramfunc.o" -o "StdPeriph_Driver/src/stm32f4xx_flash_ramfunc.o" "../StdPeriph_Driver/src/stm32f4xx_flash_ramfunc.c"
+ 
+ 
+Building file: ../StdPeriph_Driver/src/stm32f4xx_gpio.c
+Building file: ../StdPeriph_Driver/src/stm32f4xx_hash.c
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_dsi.c
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_gpio.d" -MT"StdPeriph_Driver/src/stm32f4xx_gpio.o" -o "StdPeriph_Driver/src/stm32f4xx_gpio.o" "../StdPeriph_Driver/src/stm32f4xx_gpio.c"
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_hash.d" -MT"StdPeriph_Driver/src/stm32f4xx_hash.o" -o "StdPeriph_Driver/src/stm32f4xx_hash.o" "../StdPeriph_Driver/src/stm32f4xx_hash.c"
+ 
+Building file: ../StdPeriph_Driver/src/stm32f4xx_hash_md5.c
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_hash_md5.d" -MT"StdPeriph_Driver/src/stm32f4xx_hash_md5.o" -o "StdPeriph_Driver/src/stm32f4xx_hash_md5.o" "../StdPeriph_Driver/src/stm32f4xx_hash_md5.c"
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_exti.c
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_flash_ramfunc.c
+Building file: ../StdPeriph_Driver/src/stm32f4xx_hash_sha1.c
+ 
+Invoking: MCU GCC Compiler
+Building file: ../StdPeriph_Driver/src/stm32f4xx_i2c.c
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_flash.c
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_hash_sha1.d" -MT"StdPeriph_Driver/src/stm32f4xx_hash_sha1.o" -o "StdPeriph_Driver/src/stm32f4xx_hash_sha1.o" "../StdPeriph_Driver/src/stm32f4xx_hash_sha1.c"
+Invoking: MCU GCC Compiler
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_gpio.c
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_hash.c
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+Building file: ../StdPeriph_Driver/src/stm32f4xx_iwdg.c
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_i2c.d" -MT"StdPeriph_Driver/src/stm32f4xx_i2c.o" -o "StdPeriph_Driver/src/stm32f4xx_i2c.o" "../StdPeriph_Driver/src/stm32f4xx_i2c.c"
+ 
+ 
+Invoking: MCU GCC Compiler
+Building file: ../StdPeriph_Driver/src/stm32f4xx_lptim.c
+Building file: ../StdPeriph_Driver/src/stm32f4xx_ltdc.c
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_iwdg.d" -MT"StdPeriph_Driver/src/stm32f4xx_iwdg.o" -o "StdPeriph_Driver/src/stm32f4xx_iwdg.o" "../StdPeriph_Driver/src/stm32f4xx_iwdg.c"
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_hash_md5.c
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+ 
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_lptim.d" -MT"StdPeriph_Driver/src/stm32f4xx_lptim.o" -o "StdPeriph_Driver/src/stm32f4xx_lptim.o" "../StdPeriph_Driver/src/stm32f4xx_lptim.c"
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+Building file: ../StdPeriph_Driver/src/stm32f4xx_pwr.c
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_ltdc.d" -MT"StdPeriph_Driver/src/stm32f4xx_ltdc.o" -o "StdPeriph_Driver/src/stm32f4xx_ltdc.o" "../StdPeriph_Driver/src/stm32f4xx_ltdc.c"
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_pwr.d" -MT"StdPeriph_Driver/src/stm32f4xx_pwr.o" -o "StdPeriph_Driver/src/stm32f4xx_pwr.o" "../StdPeriph_Driver/src/stm32f4xx_pwr.c"
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_hash_sha1.c
+ 
+Building file: ../StdPeriph_Driver/src/stm32f4xx_rcc.c
+Invoking: MCU GCC Compiler
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_iwdg.c
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_rcc.d" -MT"StdPeriph_Driver/src/stm32f4xx_rcc.o" -o "StdPeriph_Driver/src/stm32f4xx_rcc.o" "../StdPeriph_Driver/src/stm32f4xx_rcc.c"
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_i2c.c
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_lptim.c
+ 
+ 
+ 
+Building file: ../StdPeriph_Driver/src/stm32f4xx_rng.c
+Building file: ../StdPeriph_Driver/src/stm32f4xx_rtc.c
+Building file: ../StdPeriph_Driver/src/stm32f4xx_sai.c
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_rng.d" -MT"StdPeriph_Driver/src/stm32f4xx_rng.o" -o "StdPeriph_Driver/src/stm32f4xx_rng.o" "../StdPeriph_Driver/src/stm32f4xx_rng.c"
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_sai.d" -MT"StdPeriph_Driver/src/stm32f4xx_sai.o" -o "StdPeriph_Driver/src/stm32f4xx_sai.o" "../StdPeriph_Driver/src/stm32f4xx_sai.c"
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_ltdc.c
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_rtc.d" -MT"StdPeriph_Driver/src/stm32f4xx_rtc.o" -o "StdPeriph_Driver/src/stm32f4xx_rtc.o" "../StdPeriph_Driver/src/stm32f4xx_rtc.c"
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_pwr.c
+ 
+ 
+Building file: ../StdPeriph_Driver/src/stm32f4xx_sdio.c
+Building file: ../StdPeriph_Driver/src/stm32f4xx_spi.c
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_sdio.d" -MT"StdPeriph_Driver/src/stm32f4xx_sdio.o" -o "StdPeriph_Driver/src/stm32f4xx_sdio.o" "../StdPeriph_Driver/src/stm32f4xx_sdio.c"
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_spi.d" -MT"StdPeriph_Driver/src/stm32f4xx_spi.o" -o "StdPeriph_Driver/src/stm32f4xx_spi.o" "../StdPeriph_Driver/src/stm32f4xx_spi.c"
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_rcc.c
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_rng.c
+Building file: ../StdPeriph_Driver/src/stm32f4xx_syscfg.c
+ 
+Invoking: MCU GCC Compiler
+Building file: ../StdPeriph_Driver/src/stm32f4xx_tim.c
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_syscfg.d" -MT"StdPeriph_Driver/src/stm32f4xx_syscfg.o" -o "StdPeriph_Driver/src/stm32f4xx_syscfg.o" "../StdPeriph_Driver/src/stm32f4xx_syscfg.c"
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_sai.c
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+ 
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_tim.d" -MT"StdPeriph_Driver/src/stm32f4xx_tim.o" -o "StdPeriph_Driver/src/stm32f4xx_tim.o" "../StdPeriph_Driver/src/stm32f4xx_tim.c"
+Building file: ../StdPeriph_Driver/src/stm32f4xx_usart.c
+Invoking: MCU GCC Compiler
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_sdio.c
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_rtc.c
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_spi.c
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_usart.d" -MT"StdPeriph_Driver/src/stm32f4xx_usart.o" -o "StdPeriph_Driver/src/stm32f4xx_usart.o" "../StdPeriph_Driver/src/stm32f4xx_usart.c"
+ 
+ 
+ 
+Building file: ../StdPeriph_Driver/src/stm32f4xx_wwdg.c
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f4xx_wwdg.d" -MT"StdPeriph_Driver/src/stm32f4xx_wwdg.o" -o "StdPeriph_Driver/src/stm32f4xx_wwdg.o" "../StdPeriph_Driver/src/stm32f4xx_wwdg.c"
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_syscfg.c
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_usart.c
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_wwdg.c
+Finished building: ../StdPeriph_Driver/src/stm32f4xx_tim.c
+ 
+ 
+ 
+Building target: UART.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/Users/lab/Desktop/stm32hall/UART/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "UART.elf" @"objects.list"   -lm
+Finished building target: UART.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "UART.elf" "UART.bin"
+arm-none-eabi-size "UART.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3436	   1096	   1604	   6136	   17f8	UART.elf
+ 
+12:33:52 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+make: Nothing to be done for 'all'.
+12:39:20 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+Building target: UART.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/Users/lab/Desktop/stm32hall/UART/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "UART.elf" @"objects.list"   -lm
+Finished building target: UART.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "UART.elf" "UART.bin"
+arm-none-eabi-size "UART.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3436	   1096	   1604	   6136	   17f8	UART.elf
+ 
+12:41:17 **** Build of configuration Debug for project UART ****
+make -j6 all 
+make: Nothing to be done for 'all'.
+12:46:10 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: UART.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/Users/lab/Desktop/stm32hall/UART/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "UART.elf" @"objects.list"   -lm
+Finished building target: UART.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "UART.elf" "UART.bin"
+arm-none-eabi-size "UART.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3428	   1096	   1604	   6128	   17f0	UART.elf
+ 
+12:46:22 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+make: Nothing to be done for 'all'.
+12:46:36 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+make: Nothing to be done for 'all'.
+12:48:35 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+make: Nothing to be done for 'all'.
+12:49:49 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: UART.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/Users/lab/Desktop/stm32hall/UART/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "UART.elf" @"objects.list"   -lm
+Finished building target: UART.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "UART.elf" "UART.bin"
+arm-none-eabi-size "UART.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3420	   1096	   1604	   6120	   17e8	UART.elf
+ 
+12:50:06 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+make: Nothing to be done for 'all'.
+13:28:37 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+make: Nothing to be done for 'all'.
+13:33:25 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: UART.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/Users/lab/Desktop/stm32hall/UART/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "UART.elf" @"objects.list"   -lm
+Finished building target: UART.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "UART.elf" "UART.bin"
+arm-none-eabi-size "UART.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3428	   1096	   1604	   6128	   17f0	UART.elf
+ 
+14:01:37 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: UART.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/Users/lab/Desktop/stm32hall/UART/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "UART.elf" @"objects.list"   -lm
+Finished building target: UART.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "UART.elf" "UART.bin"
+arm-none-eabi-size "UART.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3460	   1096	   1604	   6160	   1810	UART.elf
+ 
+14:01:44 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+make: Nothing to be done for 'all'.
+14:01:54 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+make: Nothing to be done for 'all'.
+14:02:15 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+make: Nothing to be done for 'all'.
+14:03:19 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: UART.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/Users/lab/Desktop/stm32hall/UART/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "UART.elf" @"objects.list"   -lm
+Finished building target: UART.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "UART.elf" "UART.bin"
+arm-none-eabi-size "UART.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3428	   1096	   1604	   6128	   17f0	UART.elf
+ 
+14:03:27 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+make: Nothing to be done for 'all'.
+14:04:05 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: UART.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/Users/lab/Desktop/stm32hall/UART/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "UART.elf" @"objects.list"   -lm
+Finished building target: UART.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "UART.elf" "UART.bin"
+arm-none-eabi-size "UART.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3456	   1096	   1604	   6156	   180c	UART.elf
+ 
+14:04:12 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+make: Nothing to be done for 'all'.
+14:04:59 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: UART.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/Users/lab/Desktop/stm32hall/UART/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "UART.elf" @"objects.list"   -lm
+Finished building target: UART.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "UART.elf" "UART.bin"
+arm-none-eabi-size "UART.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3460	   1096	   1604	   6160	   1810	UART.elf
+ 
+14:05:06 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+make: Nothing to be done for 'all'.
+14:05:24 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\Users\lab\Desktop\stm32hall\UART\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F411RETx -DNUCLEO_F411RE -DDEBUG -DSTM32F411xE -DUSE_STDPERIPH_DRIVER -I"C:/Users/lab/Desktop/stm32hall/UART/StdPeriph_Driver/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/inc" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/device" -I"C:/Users/lab/Desktop/stm32hall/UART/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: UART.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/Users/lab/Desktop/stm32hall/UART/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "UART.elf" @"objects.list"   -lm
+Finished building target: UART.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "UART.elf" "UART.bin"
+arm-none-eabi-size "UART.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3484	   1096	   1604	   6184	   1828	UART.elf
+ 
+14:08:49 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+make: Nothing to be done for 'all'.
+14:09:06 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+make: Nothing to be done for 'all'.
+14:09:11 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+make: Nothing to be done for 'all'.
+14:16:25 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+make: Nothing to be done for 'all'.
+14:17:37 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+make: Nothing to be done for 'all'.
+14:18:11 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+make: Nothing to be done for 'all'.
+14:20:55 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+make: Nothing to be done for 'all'.
+14:21:10 **** Incremental Build of configuration Debug for project UART ****
+make -j6 all 
+make: Nothing to be done for 'all'.

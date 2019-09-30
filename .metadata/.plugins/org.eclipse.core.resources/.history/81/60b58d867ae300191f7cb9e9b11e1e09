@@ -107,7 +107,7 @@ int main(void)
 	GPIO_StructInit(&gpio);
 	gpio.GPIO_Pin = GPIO_Pin_2;
 	gpio.GPIO_Mode = GPIO_Mode_AF;
-	gpio.GPIO_OType =  GPIO_OType_PP;
+	//gpio.GPIO_OType =  GPIO_OType_PP;
 	GPIO_Init(GPIOA, &gpio);
 
 	gpio.GPIO_Pin = GPIO_Pin_3;
@@ -128,7 +128,7 @@ int main(void)
 	USART_ITConfig(USART2, USART_IT_RXNE, ENABLE);
 	USART_Cmd(USART2, ENABLE);
 
-	send_string("init0\r\n");
+
 
 	for(;;)
 	{
