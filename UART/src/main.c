@@ -33,7 +33,7 @@ int main()
 void USART2_IRQHandler()
 {
 	slowo[i] = USART_ReceiveData(USART2);
-	if(slowo[i]=='\n') {parser(&slowo); i=-1;}
+	if(slowo[i]=='\n') {parser(&slowo); i=-1;} //
 	i++;
 }
 
