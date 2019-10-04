@@ -8,162 +8,45 @@
   ******************************************************************************
 */
 
-/*#include "stm32f4xx.h"
-
-
-int main(void)
-{
-	void wyslij_znak(char c)
-	{
-		while (USART_GetFlagStatus(USART2,USART_FLAG_TXE)== RESET);
-		USART_SendData(USART2, c);
-	}
-	void wyslij_ciag(const char* s)
-	{
-		while(*s)
-		wyslij_znak(*s++);
-	}
-		GPIO_PinAFConfig(GPIOA, GPIO_PinSource2, GPIO_AF_USART2);
-		GPIO_PinAFConfig(GPIOA, GPIO_PinSource3, GPIO_AF_USART2);
-		RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
-		RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA|RCC_AHB1Periph_GPIOC, ENABLE);
-		USART_InitTypeDef uart;
-		GPIO_InitTypeDef gpio;
-    GPIO_PinAFConfig(GPIOA, GPIO_PinSource2, GPIO_AF_USART2);
-
-     GPIO_StructInit(&gpio);
-     gpio.GPIO_Pin = GPIO_Pin_2;
-     gpio.GPIO_Mode = GPIO_Mode_AF;
-     GPIO_Init(GPIOA, &gpio);
-
-     gpio.GPIO_Pin = GPIO_Pin_3;
-     gpio.GPIO_Mode = GPIO_Mode_AF;
-     GPIO_Init(GPIOA, &gpio);
-
-     gpio.GPIO_Pin = GPIO_Pin_13;
-     gpio.GPIO_Mode = GPIO_Mode_IN;
-     GPIO_Init(GPIOC, &gpio);
-
-     USART_StructInit(&uart);
-     uart.USART_BaudRate = 9600;
-     USART_Init(USART2, &uart);
-     USART_Cmd(USART2, ENABLE);
-
-while(1)
-{
-if (GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_13) == 0)
-{
-wyslij_ciag("znaki\r\n");
-}
-if (USART_GetFlagStatus(USART2, USART_FLAG_RXNE)){
-	char c = USART_ReceiveData(USART2);
-switch (c)
-{
-case 'a':
-	wyslij_ciag("komunikat1");
-	break;
-case 'b':
-	wyslij_ciag("komunikat2");
-	break;
-case 'c':
-	wyslij_ciag("komunikat3");
-	break;
-}
-}
-}
-}
-*/
 #include "stm32f4xx.h"
-			
-int main(void)
+#include "stm32f4xx_usart.h"
+#include "stm32f4xx_rcc.h"
+#include "misc.h"
+#include "parser.h"
+#include "init.h"
+
+void send_char(char c);
+void send_string(const char* s);
+void USART2_IRQHandler();
+
+char slowo[120] = {0};
+int i = 0;
+
+
+int main()
 {
+	init();
+	for(;;){}
+	return 0;
+}
 
-	void send_char(char c)
-	{
-		while (USART_GetFlagStatus(USART2, USART_FLAG_TXE) == RESET);
-		USART_SendData(USART2, c);
-	}
-
-	void send_string(const char* s)
-	{
-		while (*s)
-		send_char(*s++);
-	}
-
-
-	GPIO_InitTypeDef gpio;
-	USART_InitTypeDef uart;
-
-
-	GPIO_PinAFConfig(GPIOA, GPIO_PinSource2, GPIO_AF_USART2);
-	GPIO_PinAFConfig(GPIOA, GPIO_PinSource3, GPIO_AF_USART2);
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA | RCC_AHB1Periph_GPIOB |
-	RCC_AHB1Periph_GPIOC | RCC_AHB1Periph_GPIOD, ENABLE);
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE);
-	RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
-	GPIO_PinAFConfig(GPIOA, GPIO_PinSource2, GPIO_AF_USART2);
-
-
-	GPIO_StructInit(&gpio);
-	gpio.GPIO_Pin = GPIO_Pin_2;
-	gpio.GPIO_Mode = GPIO_Mode_AF;
-	gpio.GPIO_OType =  GPIO_OType_PP;
-	GPIO_Init(GPIOA, &gpio);
-
-	gpio.GPIO_Pin = GPIO_Pin_3;
-	gpio.GPIO_Mode = GPIO_Mode_IN;
-	//gpio.GPIO_OType = GPIO_PuPd_NOPULL;
-
-	gpio.GPIO_Pin = GPIO_Pin_13;
-	gpio.GPIO_Mode = GPIO_Mode_IN;
-	GPIO_Init(GPIOC, &gpio);
-
-
-	GPIO_Init(GPIOA, &gpio);
-
-
-	USART_StructInit(&uart);
-	uart.USART_BaudRate = 9600;
-	USART_Init(USART2, &uart);
-	USART_ITConfig(USART2, USART_IT_RXNE, ENABLE);
-	USART_Cmd(USART2, ENABLE);
-
-	send_string("init0\r\n");
-
-	for(;;)
-	{
-
-		//send_string("komunikat0\r\n");
-
-
-		if (USART_GetFlagStatus(USART2, USART_FLAG_RXNE))
-		{
-			send_string("komuni0\r\n");
-			char c = USART_ReceiveData(USART2);
-
-			switch (c)
-			{
-			case 'a':
-				send_string("komunikat1\r\n");
-				break;
-			case 'b':
-				send_string("komunikat2\r\n");
-				break;
-			case 'c':
-				send_string("komunikat3\r\n");
-			break;
-			}
-		}
-
-	}
-	/*	if (GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_13) == 0)
-		{
-			while (1)
-			{
-				send_string("Hello world!\r\n");
-			}
-		}
-	*/
+void USART2_IRQHandler()
+{
+	slowo[i] = USART_ReceiveData(USART2);
+	if(slowo[i]=='\n') {parser(&slowo); i=-1;}
+	i++;
 }
 
 
+
+void send_char(char c)
+{
+	while (USART_GetFlagStatus(USART2, USART_FLAG_TXE) == RESET);
+	USART_SendData(USART2, c);
+}
+
+void send_string(const char* s)
+{
+	while (*s)
+	send_char(*s++);
+}
