@@ -21,11 +21,10 @@
 int main()
 {
 	init();
-
-	przelacz('1','0','1','0');
-	delay(1000);
-	przelacz('0','1','1','0');
-
+	konfiguracja();
+	while(1){
+	USART2_IRQHandler();
+	}
 	return 0;
 }
 

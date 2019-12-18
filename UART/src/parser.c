@@ -53,6 +53,7 @@ void konfiguracja()
 		}
 	GPIO_ResetBits(GPIOC, GPIO_Pin_10);
 	pozycja = '0';
+	send_string("magnes wy≥\n");
 }
 void jedz_z_S_do_0()
 {
@@ -186,26 +187,6 @@ void jedz_z_N_do_S()
 
 }
 
-void RAB()
-{
-	GPIO_ResetBits(GPIOB, GPIO_Pin_14); //wy≥πcz przekaünik L
-	GPIO_ResetBits(GPIOA, GPIO_Pin_1); //wy≥πcz przekaünik N
-	GPIO_ResetBits(GPIOC, GPIO_Pin_9); //wy≥πcz przekaünik M
-	GPIO_ResetBits(GPIOB, GPIO_Pin_9); //wy≥πcz przekaünik K
-	GPIO_SetBits(GPIOA, GPIO_Pin_0); //wy≥πcz przekaünik P
-	delay(1000);
-	GPIO_ResetBits(GPIOA, GPIO_Pin_0); //wy≥πcz przekaünik P
-}
-void RBA()
-{
-	GPIO_ResetBits(GPIOB, GPIO_Pin_14); //wy≥πcz przekaünik L
-	GPIO_ResetBits(GPIOA, GPIO_Pin_1); //wy≥πcz przekaünik N
-	GPIO_ResetBits(GPIOC, GPIO_Pin_9); //wy≥πcz przekaünik M
-	GPIO_SetBits(GPIOB, GPIO_Pin_9); //wy≥πcz przekaünik K
-	GPIO_SetBits(GPIOA, GPIO_Pin_0); //wy≥πcz przekaünik P
-	delay(1000);
-	GPIO_ResetBits(GPIOA, GPIO_Pin_0); //wy≥πcz przekaünik P
-}
 
 void przelacz(char *k, char *l, char *m, char *n)
 {
@@ -224,13 +205,14 @@ void przelacz(char *k, char *l, char *m, char *n)
 
 }
 
-void parser(char *t)
+void parser()
 {
-	//send_string(slowo);  //echo
-	switch(t[0])
+	//char t[120] = slowo;
+	send_string(slowo);  //echo
+	switch(slowo[0])
 	{
 		case 'm':
-			switch(t[1]){
+			switch(slowo[1]){
 				case '0':
 					if(pozycja=='S')
 					{
@@ -282,7 +264,7 @@ void parser(char *t)
 				default: send_string("?\n");
 			} break;
 		case 's':
-			switch(t[1]){
+			switch(slowo[1]){
 				case '0':
 					//funkcja wy≥πcz úwiat≥o
 					send_string("swiatlo wy≥\n");
@@ -294,7 +276,7 @@ void parser(char *t)
 				default: send_string("?\n");
 			} break;
 		//default: send_string("?\n");
-		case 'p':
+		/*case 'p':
 			if (t[1]=='A' && t[2]=='B')
 			{
 				przelacz('0','0','0','0');
@@ -311,22 +293,29 @@ void parser(char *t)
 			else if (t[1]=='B' && t[2]=='D') przelacz('1','1','1','0');
 			else if (t[1]=='D' && t[2]=='B') przelacz('1','1','1','1');
 		break;
-
+*/
 	}
 
 
 
 //czyszczenie slowa:
 
-	for(int b=0; b<sizeof(t); b++) t[b]='\0';
+	for(int b=0; b<sizeof(slowo); b++) slowo[b]='\0';
 
 }
 
 void USART2_IRQHandler()
 {
-	slowo[i] = USART_ReceiveData(USART2);
-	if(slowo[i]=='\n'||slowo[i]=='\r') {parser(&slowo); i=-1;} //
-	i++;
+	char c = USART_ReceiveData(USART2);
+	if(c=='\n'||c=='\r')
+	{
+		parser(); i=-1;
+		for(int b=0; b<sizeof(slowo); b++) slowo[b]='\0';
+	}
+	else
+		{slowo[i]=c;
+		i++;
+		}
 }
 
 
