@@ -15,9 +15,11 @@
 #include "parser.h"
 #include "init.h"
 
+
 void send_char(char c);
 void send_string(const char* s);
 void USART2_IRQHandler();
+
 
 char slowo[120] = {0};
 int i = 0;
@@ -26,17 +28,18 @@ int i = 0;
 int main()
 {
 	init();
-	for(;;){}
+	jedzP();
+
 	return 0;
 }
 
-void USART2_IRQHandler()
+/*void USART2_IRQHandler()
 {
 	slowo[i] = USART_ReceiveData(USART2);
-	if(slowo[i]=='\n') {parser(&slowo); i=-1;} //
+	if(slowo[i]=='\n'||slowo[i]=='\r') {parser(&slowo); i=-1;} //
 	i++;
 }
-
+*/
 
 
 void send_char(char c)
