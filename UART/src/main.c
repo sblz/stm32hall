@@ -31,21 +31,12 @@ int main()
 {
 	init();
 	konfiguracja();
+	P0();
 	while(1)
 	{
 		parser();
 		delay(10);
 	}
-		delay(5000);
-		jedz_z_0_do_S();
-		delay(5000);
-		jedz_z_S_do_N();
-
-//	jedz_z_S_do_0();
-//	jedz_z_0_do_N();
-//	jedz_z_N_do_S();
-//	jedz_z_S_do_N();
-//	jedz_z_N_do_0();
 	for(;;){}
 	return 0;
 }

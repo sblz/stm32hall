@@ -77,8 +77,7 @@ void init()
 	 //deklaracja wyjœcia steruj¹cego do prze³¹cznika K1 L
 	 gpio.GPIO_Pin = GPIO_Pin_14;
 	 gpio.GPIO_Mode =  GPIO_Mode_OUT;
-	 gpio.GPIO_OType =  GPIO_OType_OD;
-	 gpio.GPIO_OType =  GPIO_PuPd_NOPULL;
+	 gpio.GPIO_OType =  GPIO_OType_PP;
 	 GPIO_Init(GPIOB, &gpio);
 
 	 //deklaracja wyjœcia steruj¹cego do prze³¹cznika K2 N

@@ -7,6 +7,10 @@
 
 char slowo[120] = {0};
 int i = 0;
+int k = 0;
+int l = 0;
+int m = 0;
+int n = 0;
 
 /*
 void send_char(char c);
@@ -71,12 +75,12 @@ void konfiguracja()
 			GPIO_SetBits(GPIOC, GPIO_Pin_11);
 			delay(1);
 			GPIO_ResetBits(GPIOC, GPIO_Pin_11);
-			delay(100);
+			delay(200);
 		}
 		GPIO_ResetBits(GPIOA, GPIO_Pin_13);
 		GPIO_ResetBits(GPIOC, GPIO_Pin_12);
 	pozycja = '0';
-	send_string("magnes wy³\n");
+	send_string("konfiguracja zakoñczona\r\n");
 }
 
 void jedz_z_S_do_0()
@@ -99,6 +103,7 @@ void jedz_z_S_do_0()
 		}
 	GPIO_ResetBits(GPIOC, GPIO_Pin_10);
 		pozycja = '0';
+		send_string("Magnes wy³¹czony\r\n");
 }
 
 void jedz_z_S_do_N()
@@ -117,10 +122,11 @@ void jedz_z_S_do_N()
 			GPIO_SetBits(GPIOC, GPIO_Pin_11);
 			delay(1);
 			GPIO_ResetBits(GPIOC, GPIO_Pin_11);
-			delay(100);
+			delay(200);
 		}*/
 	GPIO_ResetBits(GPIOC, GPIO_Pin_10);
 	pozycja = 'N';
+	send_string("Magnes w pozycji N\r\n");
 }
 
 void jedz_z_0_do_N()
@@ -129,7 +135,7 @@ void jedz_z_0_do_N()
 		while(GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_1) == 0) //sprawdz czujnik lewy N
 		{
 			GPIO_SetBits(GPIOC, GPIO_Pin_11);
-			delay(15);
+			delay(1);
 			GPIO_ResetBits(GPIOC, GPIO_Pin_11);
 			delay(50);
 		}
@@ -140,11 +146,12 @@ void jedz_z_0_do_N()
 			GPIO_SetBits(GPIOC, GPIO_Pin_11);
 			delay(1);
 			GPIO_ResetBits(GPIOC, GPIO_Pin_11);
-			delay(100);
+			delay(200);
 		}
 		*/
 	GPIO_ResetBits(GPIOC, GPIO_Pin_10);
 	pozycja = 'N';
+	send_string("Magnes w pozycji N\r\n");
 }
 void jedz_z_0_do_S()
 {
@@ -166,6 +173,7 @@ void jedz_z_0_do_S()
 		}
 	GPIO_ResetBits(GPIOC, GPIO_Pin_10);
 	pozycja = 'S';
+	send_string("Magnes w pozycji S\r\n");
 }
 void jedz_z_N_do_0()
 {
@@ -183,10 +191,11 @@ void jedz_z_N_do_0()
 			GPIO_SetBits(GPIOC, GPIO_Pin_11);
 			delay(1);
 			GPIO_ResetBits(GPIOC, GPIO_Pin_11);
-			delay(200);
+			delay(50);
 		}
-		GPIO_ResetBits(GPIOC, GPIO_Pin_10);
+	GPIO_ResetBits(GPIOC, GPIO_Pin_10);
 		pozycja = '0';
+		send_string("Magnes wy³¹czony\r\n");
 }
 void jedz_z_N_do_S()
 {
@@ -206,129 +215,309 @@ void jedz_z_N_do_S()
 			GPIO_ResetBits(GPIOC, GPIO_Pin_11);
 			delay(200);
 		}
-		GPIO_ResetBits(GPIOC, GPIO_Pin_10);
+	GPIO_ResetBits(GPIOC, GPIO_Pin_10);
 		pozycja = 'S';
+		send_string("Magnes w pozycji S\r\n");
 
 }
 
-void przelacz(char *k, char *l, char *m, char *n)
+void P0()
 {
-	if(k=='0') GPIO_ResetBits(GPIOB, GPIO_Pin_9);
-	else GPIO_SetBits(GPIOB, GPIO_Pin_9);
-	if(l=='0') GPIO_ResetBits(GPIOB, GPIO_Pin_14);
-	else GPIO_SetBits(GPIOB, GPIO_Pin_14);
-	if(m=='0') GPIO_ResetBits(GPIOC, GPIO_Pin_9);
-	else GPIO_SetBits(GPIOC, GPIO_Pin_9);
-	if(n=='0') GPIO_ResetBits(GPIOA, GPIO_Pin_1);
-	else GPIO_SetBits(GPIOA, GPIO_Pin_1);
+	GPIO_ResetBits(GPIOB, GPIO_Pin_9); //k
+	GPIO_ResetBits(GPIOB, GPIO_Pin_14); //l
+	GPIO_ResetBits(GPIOC, GPIO_Pin_9); //m
+	GPIO_ResetBits(GPIOA, GPIO_Pin_1); //n
 
 	GPIO_SetBits(GPIOA, GPIO_Pin_0); //wy³¹cz przekaŸnik P
 	delay(1000);
 	GPIO_ResetBits(GPIOA, GPIO_Pin_0);
+	send_string("AB\r\n");
+}
+void P1()
+{
+	GPIO_ResetBits(GPIOB, GPIO_Pin_9);
+	GPIO_ResetBits(GPIOB, GPIO_Pin_14);
+	GPIO_ResetBits(GPIOC, GPIO_Pin_9);
+	GPIO_SetBits(GPIOA, GPIO_Pin_1);
 
+	GPIO_SetBits(GPIOA, GPIO_Pin_0); //wy³¹cz przekaŸnik P
+	delay(1000);
+	GPIO_ResetBits(GPIOA, GPIO_Pin_0);
+	send_string("BA\r\n");
+}
+void P2()
+{
+	GPIO_ResetBits(GPIOB, GPIO_Pin_9);
+	GPIO_SetBits(GPIOB, GPIO_Pin_14);
+	GPIO_ResetBits(GPIOC, GPIO_Pin_9);
+	GPIO_ResetBits(GPIOA, GPIO_Pin_1);
+
+	GPIO_SetBits(GPIOA, GPIO_Pin_0); //wy³¹cz przekaŸnik P
+	delay(1000);
+	GPIO_ResetBits(GPIOA, GPIO_Pin_0);
+	send_string("AD\r\n");
+}
+void P3()
+{
+	GPIO_ResetBits(GPIOB, GPIO_Pin_9); //k
+	GPIO_SetBits(GPIOB, GPIO_Pin_14); //l
+	GPIO_ResetBits(GPIOC, GPIO_Pin_9); //m
+	GPIO_SetBits(GPIOA, GPIO_Pin_1); //n
+
+	GPIO_SetBits(GPIOA, GPIO_Pin_0); //wy³¹cz przekaŸnik P
+	delay(1000);
+	GPIO_ResetBits(GPIOA, GPIO_Pin_0);
+	send_string("DA\r\n");
+}
+void P4()
+{
+	GPIO_ResetBits(GPIOB, GPIO_Pin_9); //k
+	GPIO_ResetBits(GPIOB, GPIO_Pin_14); //l
+	GPIO_SetBits(GPIOC, GPIO_Pin_9); //m
+	GPIO_ResetBits(GPIOA, GPIO_Pin_1); //n
+
+	GPIO_SetBits(GPIOA, GPIO_Pin_0); //wy³¹cz przekaŸnik P
+	delay(1000);
+	GPIO_ResetBits(GPIOA, GPIO_Pin_0);
+	send_string("CB\r\n");
+}
+void P5()
+{
+	GPIO_ResetBits(GPIOB, GPIO_Pin_9); //k
+	GPIO_ResetBits(GPIOB, GPIO_Pin_14); //l
+	GPIO_SetBits(GPIOC, GPIO_Pin_9); //m
+	GPIO_SetBits(GPIOA, GPIO_Pin_1); //n
+
+	GPIO_SetBits(GPIOA, GPIO_Pin_0); //wy³¹cz przekaŸnik P
+	delay(1000);
+	GPIO_ResetBits(GPIOA, GPIO_Pin_0);
+	send_string("BC\r\n");
+}
+void P6()
+{
+	GPIO_ResetBits(GPIOB, GPIO_Pin_9); //k
+	GPIO_SetBits(GPIOB, GPIO_Pin_14); //l
+	GPIO_SetBits(GPIOC, GPIO_Pin_9); //m
+	GPIO_ResetBits(GPIOA, GPIO_Pin_1); //n
+
+	GPIO_SetBits(GPIOA, GPIO_Pin_0); //wy³¹cz przekaŸnik P
+	delay(1000);
+	GPIO_ResetBits(GPIOA, GPIO_Pin_0);
+	send_string("CD\r\n");
+}
+void P7()
+{
+	GPIO_ResetBits(GPIOB, GPIO_Pin_9); //k
+	GPIO_SetBits(GPIOB, GPIO_Pin_14); //l
+	GPIO_SetBits(GPIOC, GPIO_Pin_9); //m
+	GPIO_SetBits(GPIOA, GPIO_Pin_1); //n
+
+	GPIO_SetBits(GPIOA, GPIO_Pin_0); //wy³¹cz przekaŸnik P
+	delay(1000);
+	GPIO_ResetBits(GPIOA, GPIO_Pin_0);
+	send_string("DC\r\n");
+}
+void P8()
+{
+	GPIO_SetBits(GPIOB, GPIO_Pin_9); //k
+	GPIO_ResetBits(GPIOB, GPIO_Pin_14); //l
+	GPIO_ResetBits(GPIOC, GPIO_Pin_9); //m
+	GPIO_ResetBits(GPIOA, GPIO_Pin_1); //n
+
+	GPIO_SetBits(GPIOA, GPIO_Pin_0); //wy³¹cz przekaŸnik P
+	delay(1000);
+	GPIO_ResetBits(GPIOA, GPIO_Pin_0);
+	send_string("AC\r\n");
+}
+void P9()
+{
+	GPIO_SetBits(GPIOB, GPIO_Pin_9); //k
+	GPIO_ResetBits(GPIOB, GPIO_Pin_14); //l
+	GPIO_ResetBits(GPIOC, GPIO_Pin_9); //m
+	GPIO_SetBits(GPIOA, GPIO_Pin_1); //n
+
+	GPIO_SetBits(GPIOA, GPIO_Pin_0); //wy³¹cz przekaŸnik P
+	delay(1000);
+	GPIO_ResetBits(GPIOA, GPIO_Pin_0);
+	send_string("CA\r\n");
+}
+
+void PE()
+{
+	GPIO_SetBits(GPIOB, GPIO_Pin_9); //k
+	GPIO_SetBits(GPIOB, GPIO_Pin_14); //l
+	GPIO_SetBits(GPIOC, GPIO_Pin_9); //m
+	GPIO_ResetBits(GPIOA, GPIO_Pin_1); //n
+
+	GPIO_SetBits(GPIOA, GPIO_Pin_0); //wy³¹cz przekaŸnik P
+	delay(1000);
+	GPIO_ResetBits(GPIOA, GPIO_Pin_0);
+	send_string("BD\r\n");
+}
+void PF()
+{
+	GPIO_SetBits(GPIOB, GPIO_Pin_9); //k
+	GPIO_SetBits(GPIOB, GPIO_Pin_14); //l
+	GPIO_SetBits(GPIOC, GPIO_Pin_9); //m
+	GPIO_SetBits(GPIOA, GPIO_Pin_1); //n
+
+	GPIO_SetBits(GPIOA, GPIO_Pin_0); //wy³¹cz przekaŸnik P
+	delay(1000);
+	GPIO_ResetBits(GPIOA, GPIO_Pin_0);
+	send_string("DB\r\n");
+}
+void check()
+{
+	//konfiguracja();
+	jedz_z_0_do_N();
+	jedz_z_N_do_0();
+	jedz_z_0_do_S();
+	jedz_z_S_do_0();
+	jedz_z_0_do_N();
+	jedz_z_N_do_S();
+	jedz_z_S_do_N();
+	konfiguracja();
+	P0();
+	delay(2000);
+	P1();
+	delay(2000);
+	P2();
+	delay(2000);
+	P3();
+	delay(2000);
+	P4();
+	delay(2000);
+	P5();
+	delay(2000);
+	P6();
+	delay(2000);
+	P7();
+	delay(2000);
+	P8();
+	delay(2000);
+	P9();
+	delay(2000);
+	PE();
+	delay(2000);
+	PF();
+	delay(2000);
+	P0();
+	delay(2000);
 }
 
 void parser()
 {
 	if(slowo[i-1]=='\n'||slowo[i-1]=='\r')
 	{
-		send_string("parser(");
-		send_string(slowo);
-		send_string(")\n");
 		switch(slowo[0])
 		{
+			case 'c':
+				check();
+				send_string("Sprawdzanie zakoñczone\n");
+				break;
+
 			case 'm':
 				switch(slowo[1]){
 					case '0':
-						send_string(">>m0\n");
 						if(pozycja=='S')
 						{
 							jedz_z_S_do_0();
-							send_string("magnes wy³\n");
 						}
 						else if(pozycja=='N')
 						{
 							jedz_z_N_do_0();
-							send_string("magnes wy³\n");
 						}
 						else
 						{
 							jedz_z_N_do_S();
 							jedz_z_S_do_0();
-							send_string("magnes wy³\n");
 						}
 						break;
 					case 'N':
-						send_string(">>mN\n");
 						if(pozycja=='0')
 						{
 							jedz_z_0_do_N();
-							send_string("magnes N\n");
 						}
 						else if(pozycja=='S')
 						{
 							jedz_z_S_do_N();
-							send_string("magnes N\n");
 						}
 						else
 						{
 							jedz_z_0_do_N();
-							send_string("magnes N\n");
 						}
 						break;
 					case 'S':
-						send_string(">>mS\n");
 						if(pozycja=='0')
 						{
 							jedz_z_0_do_S();
-							send_string("magnes S\n");
 						}
 						else if(pozycja=='N')
 						{
 							jedz_z_N_do_S();
-							send_string("magnes S\n");
 						}
 						else
 						{
 							jedz_z_0_do_S();
-							send_string("magnes S\n");
 						}
 						break;
-					default: send_string("?\n");
+					default: send_string("Nieznana komenda\r\n");
 				} break;
 			case 's':
 				switch(slowo[1]){
 					case '0':
 						//funkcja wy³¹cz œwiat³o
-						send_string("swiatlo wy³\n");
+						send_string("swiatlo wy³\r\n");
 						break;
 					case '1':
 						//funkcja w³¹cz œwiat³o
-						send_string("swiatlo w³\n");
+						send_string("swiatlo w³\r\n");
 						break;
 					default: send_string("?\n");
 				} break;
-	/*		case 'p':
-				if (t[1]=='A' && t[2]=='B')
-				{
-					przelacz('0','0','0','0');
+			case 'p':
+				switch(slowo[1]){
+					case '0':
+						P0();
+						break;
+					case '1':
+						P1();
+						break;
+					case '2':
+						P2();
+						break;
+					case '3':
+						P3();
+						break;
+					case '4':
+						P4();
+						break;
+					case '5':
+						P5();
+						break;
+					case '6':
+						P6();
+						break;
+					case '7':
+						P7();
+						break;
+					case '8':
+						P8();
+						break;
+					case '9':
+						P9();
+						break;
+					case 'E':
+						PE();
+						break;
+					case 'F':
+						PF();
+						break;
+				default: send_string("Komenda nie znana\r\n");
 				}
-				else if (t[1]=='B' && t[2]=='A') przelacz('0','0','0','1');
-				else if (t[1]=='A' && t[2]=='D') przelacz('0','0','1','0');
-				else if (t[1]=='D' && t[2]=='A') przelacz('0','0','1','1');
-				else if (t[1]=='C' && t[2]=='B') przelacz('0','1','0','0');
-				else if (t[1]=='B' && t[2]=='C') przelacz('0','1','0','1');
-				else if (t[1]=='C' && t[2]=='D') przelacz('0','1','1','0');
-				else if (t[1]=='D' && t[2]=='C') przelacz('0','1','1','1');
-				else if (t[1]=='A' && t[2]=='C') przelacz('1','0','0','0');
-				else if (t[1]=='C' && t[2]=='A') przelacz('1','0','0','1');
-				else if (t[1]=='B' && t[2]=='D') przelacz('1','1','1','0');
-				else if (t[1]=='D' && t[2]=='B') przelacz('1','1','1','1');
 			break;
-	*/
+			default: send_string("Komenda nie znana\r\n");
 		}
-
-
 
 //czyszczenie slowa:
 
@@ -357,6 +546,3 @@ void send_string(const char* s)
 	while (*s)
 	send_char(*s++);
 }
-
-
-
